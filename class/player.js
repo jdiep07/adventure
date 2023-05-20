@@ -60,10 +60,8 @@ class Player {
 
     const newItem = this.getItemByName(itemName)
 
-    if (!(newItem instanceof Food)) {
-      //   const leftovers = this.items.filter((eachItem) => eachItem !== newItem)
-      //   this.items = leftovers
-      this.items.push(newItem)
+    if (newItem instanceof Food) {
+      this.items.splice(this.items.indexOf(newItem), 1)
     }
   }
 

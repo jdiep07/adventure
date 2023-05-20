@@ -42,8 +42,9 @@ class Room {
   }
 
   getItemByName(name) {
-    // .find
     const newItem = this.items.find((eachItem) => eachItem.name === name)
+    this.items = this.items.filter((eachItem) => eachItem.name !== newItem)
+
     return newItem
   }
 }
